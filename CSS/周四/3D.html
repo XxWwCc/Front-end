@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<meta charset="utf-8">
+<style type="text/css">
+div.d{
+	transform: rotateX(180deg);
+}
+div.pull
+{
+	width:100px;
+	height:100px;
+	background:red;
+	transition:width 2s;
+	-webkit-transition:width 2s; /* Safari */
+}
+div.pull:hover
+{
+	width:300px;
+}
+img.z{
+	height: 200px;
+	width: 200px;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s, transform 2s;
+}
+img.z:hover {
+    height: 400px;
+	width: 400px;
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+img{
+	height: 200px;
+	width: 200px;
+}
+</style>
+<body>
+<div class="d">
+	<img src="/home/xwc/Pictures/d.jpeg">
+</div>
+<div class="pull"></div>
+	<img src="/home/xwc/Pictures/2.gif" class="z">
+</body>
+</html>

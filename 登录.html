@@ -42,14 +42,24 @@
 			border-style: solid;
 			border-color: #99CCFF;
 			border-radius: 15px;
+			border-width: 0.5px;
 			width: 200px;
 			background-color: #99CCFF;
 			color: #ffffff;
 			padding: 5px;
 			cursor: pointer;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		}
-		input.bt:focus{
-			background-color:blue;
+		input.bt:hover{
+			border-style: solid;
+			border-width: 0.5px;
+			border-color: #99CCFF;
+			border-radius: 15px;
+			background-color: #ffffff;
+			color: #99CCFF;
+			width: 200px;
+			padding: 5px;
+			box-shadow:none;
 		}
 		img{
 			height: 50px;
@@ -63,10 +73,10 @@
 	<br/>
 <h3>哈工有思登录系统</h3>
 <img src="/home/xwc/Pictures/icon.jpg">
-<form action="">
-	<input class="ed" type="text" name="username" placeholder="用户名">
-	<input class="ed" type="password" name="password" placeholder="密码">
-	<input class="bt" type="button" name="upload" value="登录">
+<form action="" >
+	<input class="ed" type="text" name="username" placeholder="用户名" required="required">
+	<input class="ed" type="password" name="password" placeholder="密码" required="required">
+	<input class="bt" type="submit" name="upload" value="登录">
 </form>
 <!-- <form action="">
 	<input class="bt" type="submit" name="upload" value="登录">
