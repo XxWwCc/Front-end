@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>视屏背景</title>
+	<base href="/home/xwc/html/">
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		video{
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%
+			width:auto;
+			height: auto;
+			z-index: -9999;/*视屏上可以显示其他标签内容*/
+			-webkit-filter:grayscale(100%);/*video色调*/
+		}
+	</style>
+</head>
+<body>
+	<video autoplay loop style="width: 100%;" id="v1">
+		<source src="3.mp4" type="video/mp4">
+	</video>
+	<p>哈工有思</p>
+	<script type="text/javascript">
+		var video = document.getElementById('v1');
+		/*video.playbackRate = 2.0;调整视频速度*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>登录</title>
+	<style type="text/css">
+		body{
+			background-color: #99CCFF;
+		}
+		div{
+			text-align: center; /*让div内部文字居中*/
+		    background-color: #fff;
+		    border-radius: 20px;
+		    width: 300px;
+		    height: 350px;
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    	/*第二种写法*/
+		     	/*text-align: center;
+			    background-color: #fff;
+			    border-radius: 20px;
+			    width: 300px;
+			    height: 350px;
+			    position: absolute;
+			    left: 50%;
+			    top: 50%;
+			    transform: translate(-50%,-50%);*/
+		}
+		input.ed{
+			border-style: solid;
+			border-radius: 10px;
+			border-color: #99CCFF;
+			border-width: 1px;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+		input.bt{
+			border-style: solid;
+			border-color: #99CCFF;
+			border-radius: 15px;
+			width: 200px;
+			background-color: #99CCFF;
+			color: #ffffff;
+			padding: 5px;
+			cursor: pointer;
+		}
+		input.bt:focus{
+			background-color:blue;
+		}
+		img{
+			height: 50px;
+			width: 50px; 
+		}
+	</style>
+
+</head>
+<body>
+<div>
+	<br/>
+<h3>哈工有思登录系统</h3>
+<img src="/home/xwc/Pictures/icon.jpg">
+<form action="">
+	<input class="ed" type="text" name="username" placeholder="用户名">
+	<input class="ed" type="password" name="password" placeholder="密码">
+	<input class="bt" type="button" name="upload" value="登录">
+</form>
+<!-- <form action="">
+	<input class="bt" type="submit" name="upload" value="登录">
+</form> -->
+</div>
+</body>
+</html>
