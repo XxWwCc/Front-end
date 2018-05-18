@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<head>
+<script>
+function newDoc(){
+	window.location.assign("http://www.baidu.com")
+}
+</script>
+</head>
+<body>
+<script>
+	document.write(location.hostname+"<br/>");/*返回 web 主机的域名*/
+	document.write(location.href+"<br/>");
+	document.write(location.pathname+"<br/>");
+</script>
+<input type="button" value="加载新文档" onclick="newDoc()">
+
+</body>
+</html>
