@@ -1,0 +1,9 @@
+	.letter{
+		padding: 10px;
+		margin: 10px;
+		display: inline-table;
+		background-color: antiquewhite;
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 32px;
+		text-align: center;
+	}

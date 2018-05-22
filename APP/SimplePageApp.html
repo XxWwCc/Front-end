@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>单页面APP</title>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="browser.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="SimplePageApp.css"/>
+</head>
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        var idget = document.querySelector("#container");
+        ReactDOM.render(
+            <div>hello</div>
+            ,idget
+        );
+    </script>
+</body>
+</html>
