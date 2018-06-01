@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>单页面APP</title>
-    <script src="react.js"></script>
-    <script src="react-dom.js"></script>
-    <script src="browser.min.js"></script>
-    <script src="react-rounter.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script src="https://cdn.bootcss.com/react-router/4.3.0-rc.3/react-router.min.js"></script>
     <link rel="stylesheet" type="text/css" href="SimplePageApp.css"/>
 </head>
 <body>
     <div id="container"></div>
     <script type="text/babel">
-        var{
-            Router,
-            Route,
-            IndexRoute,
-            Link,
-            hashHistory
-        } = ReactRouter;
+        var Router = ReactRouter.Router;
+        var Route = ReactRouter.Route;
+        var Link = ReactRouter.Link;
+        var IndexLink = ReactRouter.IndexLink;
+        var hashHistory = ReactRouter.hashHistory;
         var idget = document.querySelector("#container");
         var Home = React.createClass({
             render:function(){
@@ -56,15 +54,9 @@
                     <div>
                         <h1>Simple SAP</h1>
                         <ul className = "header">
-                            <li><IndexLink
-                                activeClassName="active"
-                                 to="/">李白</IndexLink></li>
-                            <li><Link
-                                activeClassName="active"
-                                to="/df">杜甫</Link></li>
-                            <li><Link 
-                                activeClassName="active"
-                                to="/lsy">李商隐</Link></li>
+                            <li><IndexLink activeClassName="active" to="/">李白</IndexLink></li>
+                            <li><Link activeClassName="active" to="/df">杜甫</Link></li>
+                            <li><Link activeClassName="active" to="/lsy">李商隐</Link></li>
                         </ul>
                         <div className = "content">
                             {this.props.children}
@@ -74,14 +66,13 @@
             }
         });
         ReactDOM.render(
-            <Router history={hashHistory}>
-                <Route path="/" 
-                component={App}>
-                    <IndexRoute component={Home}/>
-                    <Route path="/df" component={Dufu}/>
-                    <Route path="/lsy" component={Lsy}/>
-                </Route>
-            </Router>
+            <ReactRouter.router history={ReactRouter.hashHistory}>
+                <ReactRouter.Route path="/" component={App}>
+                    <ReactRouter.IndexRoute component={Home}/>
+                    <ReactRouter.Route path="/df" component={Dufu}/>
+                    <ReactRouter.Route path="/lsy" component={Lsy}/>
+                </ReactRouter.Route>
+            </ReactRouter.router>
             ,idget
         );
     </script>
