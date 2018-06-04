@@ -6,75 +6,12 @@
     <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
     <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
     <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
-    <script src="https://cdn.bootcss.com/react-router/4.3.0-rc.3/react-router.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="SimplePageApp.css"/>
+    <script src="https://cdn.bootcss.com/react-router-dom/4.3.0-rc.3/react-router-dom.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="SimplePageApp.css"/> -->
 </head>
 <body>
     <div id="container"></div>
-    <script type="text/babel">
-        var Router = ReactRouter.Router;
-        var Route = ReactRouter.Route;
-        var Link = ReactRouter.Link;
-        var IndexLink = ReactRouter.IndexLink;
-        var hashHistory = ReactRouter.hashHistory;
-        var idget = document.querySelector("#container");
-        var Home = React.createClass({
-            render:function(){
-                return (
-                    <div>
-                        <h2>望天门山</h2>
-                        <p>........</p>    
-                    </div>
-                );
-            }
-        });
-        var Dufu = React.createClass({
-            render:function(){
-                return (
-                    <div>
-                        <h2>登高</h2>
-                        <p>........</p>    
-                    </div>
-                );
-            }
-        });
-        var Lsy = React.createClass({
-            render:function(){
-                return (
-                    <div>
-                        <h2>锦瑟</h2>
-                        <p>........</p>    
-                    </div>
-                );
-            }
-        });
-        var App = React.createClass({
-            render: function () {
-                return(
-                    <div>
-                        <h1>Simple SAP</h1>
-                        <ul className = "header">
-                            <li><IndexLink activeClassName="active" to="/">李白</IndexLink></li>
-                            <li><Link activeClassName="active" to="/df">杜甫</Link></li>
-                            <li><Link activeClassName="active" to="/lsy">李商隐</Link></li>
-                        </ul>
-                        <div className = "content">
-                            {this.props.children}
-                        </div>
-                    </div>
-                );
-            }
-        });
-        ReactDOM.render(
-            <ReactRouter.router history={ReactRouter.hashHistory}>
-                <ReactRouter.Route path="/" component={App}>
-                    <ReactRouter.IndexRoute component={Home}/>
-                    <ReactRouter.Route path="/df" component={Dufu}/>
-                    <ReactRouter.Route path="/lsy" component={Lsy}/>
-                </ReactRouter.Route>
-            </ReactRouter.router>
-            ,idget
-        );
+    <script type="text/babel" src="SimplePageApp.js">
     </script>
 </body>
 </html>
